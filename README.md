@@ -21,16 +21,16 @@ project-openwrt源码版本，内核为***4.19***版(同步[linux4.19内核](htt
 > `ip：192.168.1.1 密码：password`
 
 ## 固件下载
-### 点击[Actions](https://github.com/firker/openwrt-Exclusive/actions) 或者[Releases](https://github.com/firker/openwrt-Exclusive/releases) 选择需要的版本
-![avatar](https://raw.githubusercontent.com/firker/openwrt-Exclusive/main/boc/c.png)
+### 点击[Actions](https://github.com/shanhai2333/openwrt-Exclusive/actions) 或者[Releases](https://github.com/shanhai2333/openwrt-Exclusive/releases) 选择需要的版本
+![avatar](https://raw.githubusercontent.com/shanhai2333/openwrt-Exclusive/main/boc/c.png)
 
 ## 固件截图：
 ### 5.4版（支持IPV6）
-![avatar](https://raw.githubusercontent.com/firker/openwrt-Exclusive/main/boc/d.png)
+![avatar](https://raw.githubusercontent.com/shanhai2333/openwrt-Exclusive/main/boc/d.png)
 ### 5.10版（支持IPV6）
-![avatar](https://raw.githubusercontent.com/firker/openwrt-Exclusive/main/boc/b.png)
+![avatar](https://raw.githubusercontent.com/shanhai2333/openwrt-Exclusive/main/boc/b.png)
 ### project 4.19版
-![avatar](https://raw.githubusercontent.com/firker/openwrt-Exclusive/main/boc/e.png)
+![avatar](https://raw.githubusercontent.com/shanhai2333/openwrt-Exclusive/main/boc/e.png)
 ## 其他
 
 
