@@ -32,6 +32,6 @@ project-openwrt源码版本，内核为***4.19***版(同步[linux4.19内核](htt
 ### project 4.19版
 ![avatar](https://raw.githubusercontent.com/firker/openwrt-Exclusive/main/boc/e.png)
 ## 其他
-联系：[Tg频道订阅](https://t.me/zhinengchaoshenzhe)
+
 
 稳定版云编译项目：[https://github.com/firkerword/openwrt-Exclusive](https://github.com/firkerword/openwrt-Exclusive)
