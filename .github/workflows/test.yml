@@ -1,0 +1,16 @@
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: 微信报告
+      uses: emon100/Action-Serverchan@v2
+      ##if: steps.organize.outputs.status == 'success' && !cancelled()
+      with:
+        SCKEY: ${{ secrets.SERVERCHAN }}
+        text: 恭喜主人openwrt5.4固件编译成功！
+        desp: 我亲爱的主人您要编译的固件成功完成了！
+              
+              
+              
+              Have a nice day.
