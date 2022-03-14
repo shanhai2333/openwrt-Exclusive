@@ -204,3 +204,5 @@ jobs:
               
               Have a nice day.
               
+    - name: PushPlus推送
+      run: curl ""
