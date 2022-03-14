@@ -203,9 +203,3 @@ jobs:
               
               
               Have a nice day.
-
-    - name: PUSHPLUS
-      if: steps.organize.outputs.status == 'success' && !cancelled()
-      with: 
-        run: curl "http://www.pushplus.plus/send?token=${{ secrets.PUSHPLUS }}&title=恭喜主人openwrt5.4固件编译成功&content=我亲爱的主人您要编译的固件成功完成了！ <br> 奶牛快传：${{ steps.cowtransfer.outputs.url }}  <br> WeTransfer：${{ steps.wetransfer.outputs.url }}&template=html"
-         
