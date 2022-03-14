@@ -6,19 +6,34 @@ on:
       - 'releases/*'
 
 
-jobs:
-  build:
-    runs-on: ubuntu-20.04
+#jobs:
+ # build:
+  #  runs-on: ubuntu-20.04
 
-    steps:
-    - name: 微信报告
-      uses: emon100/Action-Serverchan@v2
+   # steps:
+    #- name: 微信报告
+     # uses: emon100/Action-Serverchan@v2
       ##if: steps.organize.outputs.status == 'success' && !cancelled()
+      #with:
+       # SCKEY: ${{ secrets.SERVERCHAN }}
+        #text: 恭喜主人openwrt5.4固件编译成功！
+        #desp: 我亲爱的主人您要编译的固件成功完成了！
+        
+jobs:
+  # test action works running from the graph  
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Get date
+      run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')"
+    - name: ServerChan Notify new stuffs to emon.
+      uses: emon100/Action-Serverchan@v2
+      if: steps.dataWork.outputs.changed == 'true'
       with:
-        SCKEY: ${{ secrets.SERVERCHAN }}
-        text: 恭喜主人openwrt5.4固件编译成功！
-        desp: 我亲爱的主人您要编译的固件成功完成了！
-              
-              
-              
-              Have a nice day.
+        # Secret key
+        SCKEY: ${{ secrets.SERVERCHAN }} 
+        # Message title
+        text: ${{ env.REPORT_DATE }}
+        # Message content
+        desp: ok
