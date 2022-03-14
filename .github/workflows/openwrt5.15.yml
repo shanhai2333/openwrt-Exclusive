@@ -207,4 +207,4 @@ jobs:
     - name: PUSHPLUS
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with: 
-        run: "curl --location --request GET 'http://www.pushplus.plus/send?' --header 'User-Agent: Apipost client Runtime/+https://www.apipost.cn/' --form 'token=${{ secrets.PUSHPLUS }}' --form 'title=恭喜主人openwrt5.15固件编译成功' --form 'content=我亲爱的主人您要编译的固件成功完成了！ <br> 奶牛快传：${{ steps.cowtransfer.outputs.url }}  <br> WeTransfer：${{ steps.wetransfer.outputs.url }}' --form 'template=html'"
+        run: curl ""
