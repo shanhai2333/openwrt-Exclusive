@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: PushPlus推送
-      run: curl "http://www.pushplus.plus/send?token=${{ secrets.PUSHPLUS }}&title=恭喜主人openwrt5.4固件编译成功&content=我亲爱的主人您要编译的固件成功完成了&template=html"
+      run: curl "http://www.pushplus.plus/send?token=80595ca3bd5b4ce39f797e079dea113a&title=恭喜主人openwrt5.4固件编译成功&content=我亲爱的主人您要编译的固件成功完成了&template=html"
