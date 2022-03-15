@@ -1,9 +1,15 @@
 name: "units-test"
+
 on:
-  push:
-    branches:
-      - master
-      - 'releases/*'
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+  schedule:
+    - cron: 0 21 */3 * * 
 
 jobs:
   # test action works running from the graph  
