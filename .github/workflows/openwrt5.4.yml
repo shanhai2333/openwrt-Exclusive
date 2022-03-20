@@ -197,6 +197,9 @@ jobs:
         desp: 我亲爱的主人您要编译的固件成功完成了！
               
               
+              Releases发布地址：${{ steps.release.outputs.url }} 
+              
+              
               奶牛快传：${{ steps.cowtransfer.outputs.url }}
               
               
