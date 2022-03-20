@@ -168,6 +168,7 @@ jobs:
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [国外WT网盘](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "::set-output name=status::success"
     - name: 发布至release
+      id: release
       uses: softprops/action-gh-release@v1
       if: steps.tag.outputs.status == 'success' && !cancelled()
       env:
@@ -205,4 +206,4 @@ jobs:
               Have a nice day.
 
     - name: PushPlus推送
-      run: curl "http://www.pushplus.plus/send" -d "token=${{ secrets.PUSHPLUS }}&title=恭喜主人openwrt5.4固件编译成功&content=我亲爱的主人您要编译的固件成功完成了！ <br> 奶牛快传：${{ steps.cowtransfer.outputs.url }} <br> WeTransfer：${{ steps.wetransfer.outputs.url }}&template=html"
+      run: curl "http://www.pushplus.plus/send" -d "token=${{ secrets.PUSHPLUS }}&title=恭喜主人openwrt5.4固件编译成功&content=我亲爱的主人您要编译的固件成功完成了！<br> Releases发布地址：${{ steps.release.outputs.url }} <br> 奶牛快传：${{ steps.cowtransfer.outputs.url }} <br> WeTransfer：${{ steps.wetransfer.outputs.url }}&template=html"
