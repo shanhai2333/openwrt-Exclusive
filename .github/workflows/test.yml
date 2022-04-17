@@ -18,3 +18,11 @@ jobs:
     steps:
     - name: PushPlus推送
       run: curl "http://www.pushplus.plus/send" -d "token=${{ secrets.PUSHPLUS }}&title=测试&content=我亲爱的主人您要编译的固件成功完成了！ <br> 奶牛快传：${{ steps.cowtransfer.outputs.url }} <br> WeTransfer：${{ steps.wetransfer.outputs.url }}&template=html"
+    
+    - name: TG推送
+      uses: athul/telewire@master
+      if: always()
+      with:
+        chat: ${{ secrets.chat }}
+        token: ${{ secrets.token }}
+        status: "143214"
