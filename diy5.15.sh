@@ -8,7 +8,7 @@
 # Blog: https://p3terx.com
 #=============================================================
 
-sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Makefile
 
 # Uncomment a feed source
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
@@ -22,13 +22,11 @@ sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Make
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt package/aliyundrive-webdav
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 # svn co https://github.com/linkease/istore/trunk/luci/luci-app-store package/luci-app-store
-# sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-store/Makefile
 # svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
-git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
+# git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
 git clone https://github.com/sbwml/openwrt-alist.git package/openwrt-alist
 git clone https://github.com/thinktip/luci-theme-neobird.git package/luci-theme-neobird
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-bypass package/luci-app-bypass
-sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-bypass/Makefile
 git clone https://github.com/fw876/helloworld.git package/ssr
 git clone https://github.com/firker/diy-ziyong.git package/diy-ziyong
 git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
@@ -38,6 +36,8 @@ git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luc
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
+git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
+# git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 # git clone https://github.com/project-lede/luci-app-godproxy.git package/luci-app-godproxy
 # git clone https://github.com/garypang13/luci-app-dnsfilter.git package/luci-app-dnsfilter
 # git clone https://github.com/BCYDTZ/luci-app-UUGameAcc.git package/luci-app-UUGameAcc
